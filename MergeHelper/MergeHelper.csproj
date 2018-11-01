@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.1</TargetFramework>
+    <TargetFrameworks>netstandard1.1;netstandard2.0;net45;net461</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>David West</Authors>
     <Company />
@@ -15,10 +15,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="System.Threading.Tasks.Parallel">
-      <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.1.0\ref\netcoreapp2.1\System.Threading.Tasks.Parallel.dll</HintPath>
-      <SpecificVersion>false</SpecificVersion>
-      <Private>false</Private>
+    <PackageReference Include="System.Threading.Tasks.Parallel" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Update="System.Runtime.Serialization">
+      <SpecificVersion>true</SpecificVersion>
     </Reference>
   </ItemGroup>
 
