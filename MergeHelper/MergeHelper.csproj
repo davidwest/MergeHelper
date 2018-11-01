@@ -10,8 +10,9 @@
     <PackageProjectUrl>https://github.com/davidwest/MergeHelper</PackageProjectUrl>
     <RepositoryUrl>https://github.com/davidwest/MergeHelper</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>merge collection enumerable linq morelinq</PackageTags>
+    <PackageTags>merge collection enumerable linq</PackageTags>
     <PackageIconUrl>https://i.postimg.cc/13BJFrH7/merge.png</PackageIconUrl>
+    <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
