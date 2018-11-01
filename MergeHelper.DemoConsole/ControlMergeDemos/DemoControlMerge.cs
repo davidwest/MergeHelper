@@ -16,7 +16,7 @@ namespace MergeHelper.DemoConsole
             destination.Display("Destination entities");
 
             source.ControlMerge(destination, 
-                src => src.Id, 
+                src => src.GetEntityId(), 
                 dest => dest.Id, 
                 add: src => Debug.WriteLine($"Adding :   {src.Name}"),
                 update: (src, dest) => Debug.WriteLine($"Updating : {dest.Name} => {src.Name}"),

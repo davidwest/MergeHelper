@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>David West</Authors>
     <Company />
-    <Description>An arsenal of extension methods for merging in-memory collections (adding, updating, deleting).  Supports a purely functional LINQ approach (Merge), in-place collection merging (MergeInto), and an event-driven approach (ControlMerge, ControlMergeParallel).  Many variations exist to allow special cases - add or update only, etc.</Description>
+    <Description>An arsenal of extension methods for merging in-memory collections : add, update, delete elements simultaneously.  Supports a functional LINQ approach (Merge), in-place collection merging (MergeInto), and a pure event-driven approach (ControlMerge, ControlMergeParallel).  Many variations exist to allow custom behaviors and special cases.</Description>
     <Copyright>© 2018 David West</Copyright>
     <PackageProjectUrl>https://github.com/davidwest/MergeHelper</PackageProjectUrl>
     <RepositoryUrl>https://github.com/davidwest/MergeHelper</RepositoryUrl>

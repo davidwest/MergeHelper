@@ -17,9 +17,9 @@ namespace MergeHelper.DemoConsole
 
             var result =
                 source.MergeAdd(destination, 
-                    getKeyFromSource:src => src.Id, 
+                    getKeyFromSource:src => src.GetEntityId(), 
                     getKeyFromDest:dest => dest.Id, 
-                    mapAdd:src => new Person(src.Id, src.Name));
+                    mapAdd:src => new Person(src.GetEntityId(), src.Name));
 
             result.Display("Result entities");
         }
