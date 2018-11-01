@@ -31,7 +31,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add only);
-        /// with add event
+        /// with add callback
         /// </summary>
         public static IEnumerable<T> MergeAdd<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -44,7 +44,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add only);
-        /// with add event
+        /// with add callback
         /// </summary>
         public static IEnumerable<T> MergeAdd<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -58,7 +58,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add only);
-        /// with conditional add event
+        /// with conditional add callback
         /// </summary>
         public static IEnumerable<T> MergeAdd<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -71,7 +71,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add only);
-        /// with conditional add event
+        /// with conditional add callback
         /// </summary>
         public static IEnumerable<T> MergeAdd<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -110,7 +110,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / update only);
-        /// with add and update events
+        /// with add and update callbacks
         /// </summary>
         public static IEnumerable<T> MergeAddOrUpdate<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -125,7 +125,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / update only);
-        /// with add and update events
+        /// with add and update callbacks
         /// </summary>
         public static IEnumerable<T> MergeAddOrUpdate<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -141,7 +141,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / update only);
-        /// with conditional add and update events
+        /// with conditional add and update callbacks
         /// </summary>
         public static IEnumerable<T> MergeAddOrUpdate<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -156,7 +156,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / update only);
-        /// with conditional add and update events
+        /// with conditional add and update callbacks
         /// </summary>
         public static IEnumerable<T> MergeAddOrUpdate<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -195,7 +195,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / delete only);
-        /// with add and delete events
+        /// with add and delete callbacks
         /// </summary>
         public static IEnumerable<T> Merge<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -209,7 +209,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / delete only);
-        /// with add and delete events
+        /// with add and delete callbacks
         /// </summary>
         public static IEnumerable<T> Merge<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -224,7 +224,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / delete only);
-        /// with conditional add and delete events
+        /// with conditional add and delete callbacks
         /// </summary>
         public static IEnumerable<T> Merge<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -238,7 +238,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / delete only);
-        /// with conditional add and delete events
+        /// with conditional add and delete callbacks
         /// </summary>
         public static IEnumerable<T> Merge<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -278,7 +278,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / update / delete);
-        /// with add, update, and delete events
+        /// with add, update, and delete callbacks
         /// </summary>
         public static IEnumerable<T> Merge<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -294,7 +294,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / update / delete);
-        /// with add, update, and delete events
+        /// with add, update, and delete callbacks
         /// </summary>
         public static IEnumerable<T> Merge<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -311,7 +311,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / update / delete);
-        /// with conditional add, update, and delete events
+        /// with conditional add, update, and delete callbacks
         /// </summary>
         public static IEnumerable<T> Merge<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -327,7 +327,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of T with destination sequence of T to create merged sequence of T (add / update / delete);
-        /// with conditional add, update, and delete events
+        /// with conditional add, update, and delete callbacks
         /// </summary>
         public static IEnumerable<T> Merge<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -344,7 +344,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of TSource with destination sequence of TDest to create merged sequence of TDest (add only);
-        /// with add event
+        /// with add callback
         /// </summary>
         public static IEnumerable<TDest> MergeAdd<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
@@ -358,7 +358,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of TSource with destination sequence of TDest to create merged sequence of TDest (add only);
-        /// with add event
+        /// with add callback
         /// </summary>
         public static IEnumerable<TDest> MergeAdd<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
@@ -373,7 +373,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of TSource with destination sequence of TDest to create merged sequence of TDest (add only);
-        /// with conditional add event
+        /// with conditional add callback
         /// </summary>
         public static IEnumerable<TDest> MergeAdd<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
@@ -402,7 +402,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of TSource with destination sequence of TDest to create merged sequence of TDest (add / update only);
-        /// with add and update events
+        /// with add and update callbacks
         /// </summary>
         public static IEnumerable<TDest> MergeAddOrUpdate<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
@@ -427,7 +427,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of TSource with destination sequence of TDest to create merged sequence of TDest (add / update only);
-        /// with conditional add and update events
+        /// with conditional add and update callbacks
         /// </summary>
         public static IEnumerable<TDest> MergeAddOrUpdate<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
@@ -457,7 +457,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of TSource with destination sequence of TDest to create merged sequence of TDest (add / delete only);
-        /// with add and delete events
+        /// with add and delete callbacks
         /// </summary>
         public static IEnumerable<TDest> Merge<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
@@ -473,7 +473,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of TSource with destination sequence of TDest to create merged sequence of TDest (add / delete only);
-        /// with conditional add and delete events
+        /// with conditional add and delete callbacks
         /// </summary>
         public static IEnumerable<TDest> Merge<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
@@ -503,7 +503,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of TSource with destination sequence of TDest to create merged sequence of TDest (add / update / delete);
-        /// with add, update, and delete events
+        /// with add, update, and delete callbacks
         /// </summary>
         public static IEnumerable<TDest> Merge<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
@@ -529,7 +529,7 @@ namespace MergeHelper
 
         /// <summary>
         /// Combines source sequence of TSource with destination sequence of TDest to create merged sequence of TDest (add / update / delete);
-        /// with conditional add, update, and delete events
+        /// with conditional add, update, and delete callbacks
         /// </summary>
         public static IEnumerable<TDest> Merge<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,

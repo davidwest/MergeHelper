@@ -9,7 +9,7 @@ namespace MergeHelper
     public static class ControlMergeExtensions
     {
         /// <summary>
-        /// Invokes add, update, and delete actions while combining source sequence of T with destination sequence of T
+        /// Invokes add, update, and (optionally) delete callbacks while combining source sequence of T with destination sequence of T
         /// </summary>
         public static void ControlMerge<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -23,7 +23,7 @@ namespace MergeHelper
         }
 
         /// <summary>
-        /// Invokes add, update, and delete actions while combining source sequence of TSource with destination sequence of TDest
+        /// Invokes add, update, and (optionally) delete callbacks while combining source sequence of TSource with destination sequence of TDest
         /// </summary>
         public static void ControlMerge<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
@@ -95,7 +95,7 @@ namespace MergeHelper
         }
 
         /// <summary>
-        /// Invokes add, update, and delete actions while combining source sequence of T with destination sequence of T (parallel)
+        /// Invokes add, update, and (optionally) delete callbacks while combining source sequence of T with destination sequence of T (parallel)
         /// </summary>
         public static void ControlMergeParallel<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -109,7 +109,7 @@ namespace MergeHelper
         }
 
         /// <summary>
-        /// Invokes add, update, and delete actions while combining source sequence of T with destination sequence of T (parallel)
+        /// Invokes add, update, and (optionally) delete callbacks while combining source sequence of T with destination sequence of T (parallel)
         /// </summary>
         public static void ControlMergeParallel<T, TKey>(
             this IEnumerable<T> sourceSeq,
@@ -124,7 +124,7 @@ namespace MergeHelper
         }
 
         /// <summary>
-        /// Invokes add, update, and delete actions while combining source sequence of TSource with destination sequence of TDest (parallel)
+        /// Invokes add, update, and (optionally) delete callbacks while combining source sequence of TSource with destination sequence of TDest (parallel)
         /// </summary>
         public static void ControlMergeParallel<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
@@ -139,7 +139,7 @@ namespace MergeHelper
         }
 
         /// <summary>
-        /// Invokes add, update, and delete actions while combining source sequence of TSource with destination sequence of TDest (parallel)
+        /// Invokes add, update, and (optionally) delete callbacks while combining source sequence of TSource with destination sequence of TDest (parallel)
         /// </summary>
         public static void ControlMergeParallel<TSource, TDest, TKey>(
             this IEnumerable<TSource> sourceSeq,
