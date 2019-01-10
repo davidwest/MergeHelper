@@ -42,4 +42,12 @@ namespace MergeHelper
 
     public class ControlMerger<T, TKey> : ControlMergerBase<ControlMerger<T, TKey>, T, TKey>
     { }
+
+    public class ControlMerger<T> : ControlMergerBase<ControlMerger<T>, T, object>
+    {
+        public ControlMerger()
+        {
+            WithKey(item => item);
+        }
+    }
 }

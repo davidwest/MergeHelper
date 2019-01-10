@@ -69,4 +69,12 @@ namespace MergeHelper
     
     public class InPlaceMerger<T, TKey> : InPlaceMergerBase<InPlaceMerger<T, TKey>, T, TKey>
     { }
+
+    public class InPlaceMerger<T> : InPlaceMergerBase<InPlaceMerger<T>, T, object>
+    {
+        public InPlaceMerger()
+        {
+            WithKey(item => item);
+        }
+    }
 }

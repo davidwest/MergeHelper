@@ -77,4 +77,12 @@ namespace MergeHelper
 
     public class Merger<T, TKey> : MergerBase<Merger<T, TKey>, T, TKey>
     { }
+
+    public class Merger<T> : MergerBase<Merger<T>, T, object>
+    {
+        public Merger()
+        {
+            WithKey(item => item);
+        }
+    }
 }
