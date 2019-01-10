@@ -12,11 +12,12 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>merge collection enumerable linq</PackageTags>
     <PackageIconUrl>https://i.postimg.cc/13BJFrH7/merge.png</PackageIconUrl>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>1.0.1.1</AssemblyVersion>
-    <FileVersion>1.0.1.1</FileVersion>
-    <Version>1.0.1.1</Version>
-    <PackageReleaseNotes>Added fluent helper classes for materializing merges.</PackageReleaseNotes>
+    <AssemblyVersion>1.0.1.2</AssemblyVersion>
+    <FileVersion>1.0.1.2</FileVersion>
+    <Version>1.0.1.2</Version>
+    <PackageReleaseNotes>Expanded fluent classes to include those with default key selection.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

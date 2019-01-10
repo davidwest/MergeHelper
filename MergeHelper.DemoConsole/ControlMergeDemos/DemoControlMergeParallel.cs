@@ -21,11 +21,11 @@ namespace MergeHelper.DemoConsole
 
             var sw = Stopwatch.StartNew();
 
-            new IntMerger()
+            new ControlMerger<int>()
                 .FromSource(intsDivisibleBy19)
-                .Add(toAdd => adds.Add(toAdd))
+                .Add(adds.Add)
                 .Update((s, d) => matches.Add(s))
-                .Delete(toRemove => removals.Add(toRemove))
+                .Delete(removals.Add)
                 .ExecuteParallel(intsDivisibleBy3);
 
             sw.Stop();

@@ -21,12 +21,11 @@ namespace MergeHelper.Test
             var matches = new ConcurrentBag<int>();
             var removals = new ConcurrentBag<int>();
 
-            new ControlMerger<int, int>()
+            new ControlMerger<int>()
                 .FromSource(intsDivisibleBy19)
-                .WithKey(x => x)
-                .Add(toAdd => adds.Add(toAdd))
+                .Add(adds.Add)
                 .Update((s, d) => matches.Add(s))
-                .Delete(toRemove => removals.Add(toRemove))
+                .Delete(removals.Add)
                 .ExecuteParallel(intsDivisibleBy3);
 
             var expectedAdds = Enumerable.Range(1, max).Where(x => x % 3 != 0 && x % 19 == 0).ToArray();
