@@ -15,14 +15,12 @@ namespace MergeHelper.DemoConsole
 
             source.Display("Source DTOs");
             destination.Display("Destination entity collection (before merge)");
-            
-            source.MergeInto(destination, 
-                getKeyFromSource: src => src.GetEntityId(), 
-                getKeyFromDest: dest => dest.Id, 
-                mapAdd: src => new Person(src.GetEntityId(), src.Name), 
-                update: (src,dest) => dest.Name = src.Name,
-                onAdding: src => !src.Name.StartsWith('A'),
-                onDeleting: dest => !dest.Name.StartsWith('S'));
+
+            new InPlacePersonMerger()
+                .FromSource(source)
+                .OnAdding(src => !src.Name.StartsWith('A'))
+                .OnDeleting(dest => !dest.Name.StartsWith('S'))
+                .MergeInto(destination);
 
             destination.Display("Destination entity collection (after merge)");
         }
