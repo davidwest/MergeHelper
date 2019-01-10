@@ -20,14 +20,14 @@ namespace MergeHelper.Test
             var adds = new ConcurrentBag<int>();
             var matches = new ConcurrentBag<int>();
             var removals = new ConcurrentBag<int>();
-            
-            intsDivisibleBy19
-                .ControlMergeParallel( 
-                    intsDivisibleBy3, 
-                    x => x, 
-                    toAdd => adds.Add(toAdd),
-                    (s, d) => matches.Add(s),
-                    toRemove => removals.Add(toRemove));
+
+            new ControlMerger<int, int>()
+                .FromSource(intsDivisibleBy19)
+                .WithKey(x => x)
+                .Add(toAdd => adds.Add(toAdd))
+                .Update((s, d) => matches.Add(s))
+                .Delete(toRemove => removals.Add(toRemove))
+                .ExecuteParallel(intsDivisibleBy3);
 
             var expectedAdds = Enumerable.Range(1, max).Where(x => x % 3 != 0 && x % 19 == 0).ToArray();
             var expectedMatches = Enumerable.Range(1, max).Where(x => x % 3 == 0 && x % 19 == 0).ToArray();
