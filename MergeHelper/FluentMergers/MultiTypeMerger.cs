@@ -69,6 +69,24 @@ namespace MergeHelper
             return (TBuilder)this;
         }
 
+        public TBuilder DoNotAdd()
+        {
+            _addingCallback = item => false;
+            return (TBuilder)this;
+        }
+
+        public TBuilder DoNotUpdate()
+        {
+            _updatingCallback = (src, dest) => false;
+            return (TBuilder)this;
+        }
+
+        public TBuilder DoNotDelete()
+        {
+            _deletingCallback = dest => false;
+            return (TBuilder)this;
+        }
+
         public IEnumerable<TDest> Merge(IEnumerable<TDest> destSeq)
         {
             return _source.Merge(destSeq, _getSourceKey, _getDestKey, _mapAddCallback, _mapUpdateCallback, _addingCallback,_updatingCallback, _deletingCallback);
