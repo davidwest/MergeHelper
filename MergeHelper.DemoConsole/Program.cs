@@ -8,23 +8,23 @@ namespace MergeHelper.DemoConsole
         {
             Console.WriteLine("Starting");
 
-            //DemoMerge.Start();
-            //DemoMergeWithEvents.Start();
-            //DemoMergeWithConditionals.Start();
-            //DemoMergeWithoutUpdates.Start();
-            //DemoMergeAddOrUpdate.Start();
-            //DemoMergeAdd.Start();
+            DemoMerge.Start();
+            DemoMergeWithEvents.Start();
+            DemoMergeWithConditionals.Start();
+            DemoMergeWithoutUpdates.Start();
+            DemoMergeAddOrUpdate.Start();
+            DemoMergeAdd.Start();
 
-            //DemoMergeInto.Start();
-            //DemoMergeIntoWithEvents.Start();
-            //DemoMergeIntoWithConditionals.Start();
-            //DemoMergeIntoWithoutUpdates.Start();
-            //DemoMergeAddOrUpdateInto.Start();
-            //DemoMergeAddInto.Start();
+            DemoMergeInto.Start();
+            DemoMergeIntoWithEvents.Start();
+            DemoMergeIntoWithConditionals.Start();
+            DemoMergeIntoWithoutUpdates.Start();
+            DemoMergeAddOrUpdateInto.Start();
+            DemoMergeAddInto.Start();
 
-            //DemoControlMerge.Start();
+            DemoControlMerge.Start();
             DemoControlMergeParallel.Start();
-            
+
             Console.WriteLine("Finished");
             Console.ReadKey();
         }

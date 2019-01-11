@@ -60,6 +60,24 @@ namespace MergeHelper
             
             return (TBuilder)this;
         }
+
+        public TBuilder DoNotAdd()
+        {
+            _addingCallback = item => false;
+            return (TBuilder) this;
+        }
+
+        public TBuilder DoNotUpdate()
+        {
+            _updateCallback = (src, dest) => { };
+            return (TBuilder)this;
+        }
+
+        public TBuilder DoNotDelete()
+        {
+            _deletingCallback = item => false;
+            return (TBuilder)this;
+        }
         
         public void MergeInto(ICollection<T> destCollection)
         {

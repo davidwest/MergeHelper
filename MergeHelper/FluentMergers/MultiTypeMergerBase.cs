@@ -6,9 +6,9 @@ namespace MergeHelper
     public abstract class MasterMergerBase<TBuilder, TSource, TDest, TKey> 
         where TBuilder : MasterMergerBase<TBuilder, TSource, TDest, TKey>
     {
-        internal IEnumerable<TSource> _source = GetEmptySource();
-        internal Func<TSource, TKey> _getSourceKey;
-        internal Func<TDest, TKey> _getDestKey;
+        private protected IEnumerable<TSource> _source = GetEmptySource();
+        private protected Func<TSource, TKey> _getSourceKey;
+        private protected Func<TDest, TKey> _getDestKey;
         
         public TBuilder FromSource(IEnumerable<TSource> source)
         {

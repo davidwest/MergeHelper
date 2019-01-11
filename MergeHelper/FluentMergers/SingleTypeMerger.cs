@@ -68,6 +68,24 @@ namespace MergeHelper
             _deletingCallback = deletingCallback ?? (x => true);
             return (TBuilder)this;
         }
+        
+        public TBuilder DoNotAdd()
+        {
+            _addingCallback = item => false;
+            return (TBuilder) this;
+        }
+        
+        public TBuilder DoNotUpdate()
+        {
+            _updatingCallback = (src,dest) => false;
+            return (TBuilder)this;
+        }
+
+        public TBuilder DoNotDelete()
+        {
+            _deletingCallback = dest => false;
+            return (TBuilder) this;
+        }
 
         public IEnumerable<T> Merge(IEnumerable<T> destSeq)
         {

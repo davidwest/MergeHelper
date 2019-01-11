@@ -16,11 +16,11 @@ namespace MergeHelper.DemoConsole
             destination.Display("Destination entities");
 
             var result =
-                source.Merge(destination, 
-                    getKeyFromSource:src => src.GetEntityId(), 
-                    getKeyFromDest:dest => dest.Id, 
-                    mapAdd:src => new Person(src.GetEntityId(), src.Name), 
-                    mapUpdate:(src,dest) => new Person(dest.Id, src.Name));
+                source.Merge(destination,
+                    getKeyFromSource: src => src.GetEntityId(),
+                    getKeyFromDest: dest => dest.Id,
+                    mapAdd: src => new Person(src.GetEntityId(), src.Name),
+                    mapUpdate: (src, dest) => new Person(dest.Id, src.Name));
 
             result.Display("Result entities");
         }

@@ -53,6 +53,25 @@ namespace MergeHelper
             return (TBuilder)this;
         }
 
+        public TBuilder DoNotAdd()
+        {
+            _addingCallback = item => false;
+            return (TBuilder)this;
+        }
+
+        public TBuilder DoNotUpdate()
+        {
+            _updateCallback = (src, dest) => { };
+            return (TBuilder)this;
+        }
+
+        public TBuilder DoNotDelete()
+        {
+            _deletingCallback = item => false;
+            return (TBuilder)this;
+        }
+
+
         public void MergeInto(ICollection<TDest> destCollection)
         {
             _source.MergeInto(destCollection, _getSourceKey, _getDestKey, _mapAddCallback, _updateCallback, _addingCallback, _deletingCallback);
